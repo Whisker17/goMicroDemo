@@ -26,12 +26,7 @@ enum RespType {
     DESCEND = 2;
 }
 
-
-
-message SRequest {
-    int64 count = 1;
-}
-
-message SResponse {
-    repeated string value = 1;
+// 服务接口
+service Say {
+    rpc Hello(SayParam) returns (SayResponse) {}
 }
