@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package rpcapi;
+import "github.com/Whisker17/goMicroDemo/proto/model/common.proto";
+
+// 服务接口
+service Say {
+    rpc Hello(model.SayParam) returns (model.SayResponse) {}
+    rpc MyName(model.SayParam) returns (model.SayResponse) {}
+}
